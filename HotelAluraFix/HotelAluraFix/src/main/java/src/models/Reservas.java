@@ -2,10 +2,9 @@ package src.models;
 
 import java.sql.Date;
 import java.util.Objects;
-import java.util.UUID;
 
 public class Reservas {
-   private UUID id;
+   private Integer id;
    private Integer numeroReserva;
    private Date dataEntrada;
    private Date dataSaida;
@@ -33,8 +32,7 @@ public class Reservas {
    public Reservas() {
    }
 
-
-   public Reservas(UUID id, Integer numberoReserva, Date dataEntrada, Date dataSaida, Double valor, Integer formaPagamento) {
+   public Reservas(Integer id, Integer numberoReserva, Date dataEntrada, Date dataSaida, Double valor, Integer formaPagamento) {
       this.id = id;
       this.numeroReserva = numberoReserva;
       this.dataEntrada = dataEntrada;
@@ -43,11 +41,11 @@ public class Reservas {
       this.formaPagamento = formaPagamento;
    }
 
-   public UUID getId() {
+   public Integer getId() {
       return id;
    }
 
-   public void setId(UUID id) {
+   public void setId(Integer id) {
       this.id = id;
    }
 

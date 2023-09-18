@@ -3,10 +3,9 @@ package src.models;
 import java.sql.Date;
 import java.util.List;
 import java.util.Objects;
-import java.util.UUID;
 
 public class Hospedes {
-    private UUID id;
+    private Integer id;
     private  String nome;
 
     private String sobreNome;
@@ -22,7 +21,7 @@ public class Hospedes {
     public Hospedes() {
     }
 
-    public Hospedes(UUID id, String nome, String sobreNome, Date dataNascimento, String nascionalidade, String telefone, List<Reservas> reservas) {
+    public Hospedes(Integer id, String nome, String sobreNome, Date dataNascimento, String nascionalidade, String telefone, List<Reservas> reservas) {
         this.id = id;
         this.nome = nome;
         this.sobreNome = sobreNome;
@@ -33,11 +32,11 @@ public class Hospedes {
     }
 
 
-    public UUID getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

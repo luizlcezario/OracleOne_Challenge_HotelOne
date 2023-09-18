@@ -7,8 +7,8 @@ import src.models.Reservas;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
-import java.util.UUID;
 
 public class RegisterRepository {
     static private final RegisterRepository instance = new RegisterRepository();
@@ -29,13 +29,13 @@ public class RegisterRepository {
             Hospedes hp = null;
             while (rst.next()) {
                 hp = new Hospedes(
-                        UUID.fromString(rst.getString("id")),
+                        rst.getInt("id"),
                         rst.getString("nome"),
                         rst.getString("sobrenome"),
                         rst.getDate("datanascimento"),
                         rst.getString("nascionalidade"),
                         rst.getString("telefone"),
-                        getReservasByHospedes(UUID.fromString(rst.getString("id")))
+                        getReservasByHospedes(rst.getInt("id"))
                 );
             }
             System.out.println(hp);
@@ -57,7 +57,7 @@ public class RegisterRepository {
             stmt.executeUpdate();
             ResultSet rst = stmt.getGeneratedKeys();
             while (rst.next()) {
-                hp.setId(UUID.fromString(rst.getString("id")));
+                hp.setId(rst.getInt("id"));
             }
             System.out.println(hp);
             return hp;
@@ -68,17 +68,16 @@ public class RegisterRepository {
 
     public Reservas createNewReserva(Reservas reser) {
         try {
-            PreparedStatement stmt = db.getConnection().prepareStatement("INSERT INTO reservas(dataentrada, datasaida, valor, formapagamento,  fkidhospede) values( ?, ?, ?, ?, uuid(?));", Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement stmt = db.getConnection().prepareStatement("INSERT INTO reservas(dataentrada, datasaida, valor, formapagamento,  fkidhospede) values( ?, ?, ?, ?, ?);", Statement.RETURN_GENERATED_KEYS);
             stmt.setDate(1, (Date) reser.getDataEntrada());
-            stmt.setDate(2, (Date) reser.getDataSaida()
-            );
+            stmt.setDate(2, (Date) reser.getDataSaida());
             stmt.setInt(3, reser.getValor().intValue());
             stmt.setInt(4, reser.getFormaPagamento());
-            stmt.setString(5, UUID.fromString(reser.getHospede().getId().toString()).toString());
+            stmt.setInt(5, reser.getHospede().getId());
             stmt.executeUpdate();
             ResultSet rst = stmt.getGeneratedKeys();
             while (rst.next()) {
-                reser.setId(UUID.fromString(rst.getString("id")));
+                reser.setId(rst.getInt("id"));
                 reser.setNumeroReserva(rst.getInt("numeroreserva"));
             }
             System.out.println(reser);
@@ -88,10 +87,10 @@ public class RegisterRepository {
         }
     }
 
-    private List<Reservas> getReservasByHospedes(UUID id) {
+    private List<Reservas> getReservasByHospedes(Integer id) {
         try {
             PreparedStatement stmt = db.getConnection().prepareStatement("SELECT * FROM reservas WHERE fkidhospede = ?");
-            stmt.setString(1, id.toString());
+            stmt.setInt(1, id);
             stmt.execute();
             ResultSet rst = stmt.getResultSet();
             return createNewLisReservas(rst);
@@ -122,19 +121,39 @@ public class RegisterRepository {
         }
     }
 
+    public void deleteHospedes(Integer id) {
+        try {
+            PreparedStatement stmt = db.getConnection().prepareStatement("DELETE FROM hospedes WHERE id = ?;");
+            stmt.setInt(1, id);
+            stmt.execute();
+            ResultSet rst = stmt.getResultSet();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public void deleteReserva(Integer id) {
+        try {
+            PreparedStatement stmt = db.getConnection().prepareStatement("DELETE FROM reservas WHERE id = ?;");
+            stmt.setInt(1, id);
+            stmt.execute();
+            ResultSet rst = stmt.getResultSet();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     private List<Hospedes> createNewLisHospedes(ResultSet rst) {
         List<Hospedes> listAll = new ArrayList<>();
         try {
             while(rst.next()) {
                 listAll.add(new Hospedes(
-                        UUID.fromString(rst.getString("id")),
+                         rst.getInt("id"),
                         rst.getString("nome"),
                         rst.getString("sobrenome"),
                         rst.getDate("datanascimento"),
                         rst.getString("nascionalidade"),
                         rst.getString("telefone"),
-                        getReservasByHospedes( UUID.fromString(rst.getString("id")))
+                        getReservasByHospedes( rst.getInt("id"))
                 ));
             }
         } catch (SQLException e) {
@@ -148,7 +167,7 @@ public class RegisterRepository {
         try {
             while(rst.next()) {
                 listAll.add(new Reservas(
-                        UUID.fromString(rst.getString("id")),
+                        rst.getInt("id"),
                         rst.getInt("numeroreserva"),
                         rst.getDate("dataentrada"),
                         rst.getDate("datasaida"),
@@ -160,5 +179,61 @@ public class RegisterRepository {
             System.out.println(e.getMessage());
         }
         return listAll;
+    }
+
+    public List<Reservas> atualizarReservas(Integer id, Date dataEntrada, Date dataSaida, String valor, Integer type) {
+            try (PreparedStatement stm = db.getConnection()
+                    .prepareStatement("UPDATE reservas SET dataentrada = ?,  datasaida = ?, valor = ? formapagamento = ? WHERE id = ? RETURNING *;")) {
+                stm.setDate(1, dataEntrada);
+                stm.setDate(2, dataSaida);
+                stm.setString(3, valor);
+                stm.setInt(4, type);
+                stm.setInt(5, id);
+                stm.execute();
+                ResultSet rst = stm.getResultSet();
+                return createNewLisReservas(rst);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+    }
+
+    public List<Hospedes> atualizarHospedes(Integer id, String nome, String sobrenome, Date dataNascimento, String nacionalidade, String telefone) {
+        try (PreparedStatement stm = db.getConnection()
+                .prepareStatement("UPDATE hospedes SET nome = ?, sobrenome= ?, datanascimento  = ? ,nascionalidade = ?, telefone = ? WHERE id = ? RETURNING *;")) {
+            stm.setString(1, nome);
+            stm.setString(2, sobrenome);
+            stm.setDate(3, dataNascimento);
+            stm.setString(4, nacionalidade);
+            stm.setString(5, telefone);
+            stm.setInt(6, id);
+            stm.execute();
+            ResultSet rst = stm.getResultSet();
+            return createNewLisHospedes(rst);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public List<?> findBy(String type, String value, String table) {
+        try {
+            String sqlQuery = "SELECT * FROM "+ table +" WHERE "+ type + " = ?;";
+            PreparedStatement stmt = db.getConnection().prepareStatement(sqlQuery);
+            if (type.equals("id")) {
+                stmt.setInt(1, Integer.parseInt(value));
+            } else {
+                stmt.setString(1,  value);
+            }
+            stmt.execute();
+            ResultSet rst = stmt.getResultSet();
+            if (Objects.equals(table, "hospedes")) {
+                return createNewLisHospedes(rst);
+            } else if (Objects.equals(table, "reservas"))  {
+                return createNewLisReservas(rst);
+            } else {
+                return  new ArrayList<>();
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

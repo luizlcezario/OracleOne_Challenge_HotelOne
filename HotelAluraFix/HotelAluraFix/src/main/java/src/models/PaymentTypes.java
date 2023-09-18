@@ -27,7 +27,10 @@ public enum PaymentTypes {
         return Arrays.stream(PaymentTypes.values()).filter(pt -> pt.getValue().equals(type)).findAny();
     }
 
-    public String getValue() {
+    static public Optional<PaymentTypes> fromInt(Integer type) {
+        return Arrays.stream(PaymentTypes.values()).filter(pt -> pt.getType().equals(type)).findAny();
+    }
+        public String getValue() {
         return value;
     }
 
