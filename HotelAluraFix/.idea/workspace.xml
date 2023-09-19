@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="35b299ca-0793-4612-8e72-c95c3052fcf3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/HotelAluraFix/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotelAluraFix/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotelAluraFix/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotelAluraFix/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/java/src/MainClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/java/src/controllers/RegisterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/java/src/db/DatabaseConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/java/src/models/Hospedes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/java/src/models/PaymentTypes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/java/src/models/Reservas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/java/src/repository/RegisterRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../postgres.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sql-config/start_server.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/.idea/libraries/c3p0_0_9_5_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/.idea/libraries/jcalendar_1_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/.settings/org.eclipse.ltk.core.refactoring.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/AluraHotel-Esp.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/Ha-100px.png" beforeDir="false" afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/resources/imagenes/Ha-100px.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/aH-150px.png" beforeDir="false" afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/resources/imagenes/aH-150px.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/aH-40px.png" beforeDir="false" afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/resources/imagenes/aH-40px.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/busqueda.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/calendario.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/cancelar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/cerrar-24px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/cerrar-sesion 32-px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/deletar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/disquete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/editar-texto.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/hotel.png" beforeDir="false" afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/resources/imagenes/hotel.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/icon-buscar.png" beforeDir="false" afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/resources/imagenes/icon-buscar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/icon-reservas.png" beforeDir="false" afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/resources/imagenes/icon-reservas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/img-hotel-login-.png" beforeDir="false" afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/resources/imagenes/img-hotel-login-.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/lOGO-50PX.png" beforeDir="false" afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/resources/imagenes/lOGO-50PX.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/login.png" beforeDir="false" afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/resources/imagenes/login.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/login2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/lupa-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/lupa2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/menu-img.png" beforeDir="false" afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/resources/imagenes/menu-img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/papelera-de-reciclaje.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/perfil-del-usuario.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/persona.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/pessoas.png" beforeDir="false" afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/resources/imagenes/pessoas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/registro.png" beforeDir="false" afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/resources/imagenes/registro.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/reservado.png" beforeDir="false" afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/resources/imagenes/reservado.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/reservas-img-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/resources/imagenes/reservas-img-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/bin/imagenes/reservas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/Ha-100px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/aH-150px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/aH-40px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/busqueda.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/calendario.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/cancelar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/cerrar-24px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/cerrar-sesion 32-px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/deletar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/disquete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/editar-texto.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/hotel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/icon-buscar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/icon-reservas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/img-hotel-login-.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/lOGO-50PX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/login.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/login2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/lupa-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/lupa2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/menu-img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/papelera-de-reciclaje.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/perfil-del-usuario.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/persona.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/pessoas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/registro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/reservado.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/reservas-img-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/imagenes/reservas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/jdb/factory/ConnectionFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/jdb/factory/TestaConexao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/jdbc/controller/HospedesController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/jdbc/controller/ReservasController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/jdbc/dao/HospedesDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/jdbc/dao/ReservaDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/jdbc/modelo/Hospedes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/jdbc/modelo/Reserva.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/views/Busca.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/views/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/java/src/views/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/views/MenuPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/java/src/views/MenuPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/views/MenuUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/java/src/views/MenuUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/views/RegistroHospede.java" beforeDir="false" afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/java/src/views/RegistroHospede.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/views/ReservasView.java" beforeDir="false" afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/java/src/views/ReservasView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PT-hotel-alura/src/views/Sucesso.java" beforeDir="false" afterPath="$PROJECT_DIR$/HotelAluraFix/src/main/java/src/views/Sucesso.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2VGwkXFi0adTPhBz8lnO8ITyZEX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/sites/Oracle/OracleOne_Challenge_HotelOne"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="35b299ca-0793-4612-8e72-c95c3052fcf3" name="Changes" comment="" />
+      <created>1694475867799</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694475867799</updated>
+    </task>
+    <servers />
+  </component>
+</project>
